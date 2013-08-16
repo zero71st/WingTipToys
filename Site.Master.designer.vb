@@ -23,6 +23,24 @@ Partial Public Class SiteMaster
     Protected WithEvents HeadContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
+    '''A2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents A2 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''Logo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Logo As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
     '''FeaturedContent control.
     '''</summary>
     '''<remarks>

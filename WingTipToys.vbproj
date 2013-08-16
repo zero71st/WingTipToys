@@ -214,7 +214,46 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\Catalog\Images\boatbig.png" />
+    <Content Include="Images\Catalog\Images\boatpaper.png" />
+    <Content Include="Images\Catalog\Images\boatsail.png" />
+    <Content Include="Images\Catalog\Images\busdouble.png" />
+    <Content Include="Images\Catalog\Images\busgreen.png" />
+    <Content Include="Images\Catalog\Images\busred.png" />
+    <Content Include="Images\Catalog\Images\carconvert.png" />
+    <Content Include="Images\Catalog\Images\carearly.png" />
+    <Content Include="Images\Catalog\Images\carfast.png" />
+    <Content Include="Images\Catalog\Images\carfaster.png" />
+    <Content Include="Images\Catalog\Images\carracer.png" />
+    <Content Include="Images\Catalog\Images\planeace.png" />
+    <Content Include="Images\Catalog\Images\planeglider.png" />
+    <Content Include="Images\Catalog\Images\planepaper.png" />
+    <Content Include="Images\Catalog\Images\planeprop.png" />
+    <Content Include="Images\Catalog\Images\rocket.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\boatbig.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\boatpaper.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\boatsail.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\busdouble.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\busgreen.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\busred.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\carconvert.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\carearly.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\carfast.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\carfaster.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\carracer.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\planeace.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\planeglider.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\planepaper.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\planeprop.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\rocket.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\truckbig.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\truckearly.png" />
+    <Content Include="Images\Catalog\Images\Thumbs\truckfire.png" />
+    <Content Include="Images\Catalog\Images\truckbig.png" />
+    <Content Include="Images\Catalog\Images\truckearly.png" />
+    <Content Include="Images\Catalog\Images\truckfire.png" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -226,7 +265,10 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="packages.config" />
+    <Content Include="Images\Catalog\Images\Thumbs.db" />
+    <Content Include="Images\Catalog\Images\Thumbs\Thumbs.db" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="ProductList.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -346,6 +388,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Models\ProductDatabaseInitializer.vb" />
+    <Compile Include="ProductList.aspx.designer.vb">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductList.aspx.vb">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
