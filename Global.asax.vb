@@ -1,4 +1,5 @@
 ﻿Imports System.Web.Optimization
+Imports System.Data.Entity
 
 Public Class Global_asax
     Inherits HttpApplication
@@ -8,6 +9,8 @@ Public Class Global_asax
         BundleConfig.RegisterBundles(BundleTable.Bundles)
         AuthConfig.RegisterOpenAuth()
         RouteConfig.RegisterRoutes(RouteTable.Routes)
+
+        Database.SetInitializer(New ProductDatabaseInitializer())
     End Sub
 
     Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)
