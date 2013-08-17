@@ -45,4 +45,11 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
     End Sub
+
+    Public Function GetCategories() As IQueryable(Of Category)
+        Dim db = New ProductContext()
+        Dim query As IQueryable(Of Category) = db.Categories
+        Return query
+    End Function
+
 End Class

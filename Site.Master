@@ -75,8 +75,8 @@
         </header>
         <div id="body">
             <section style="text-align: center; background-color: #fff">
-                <asp:ListView ID="categorylist" runat="server"
-                    ItemType="Wingtiptoys.Models.Category"
+                <asp:ListView ID="categoryList" runat="server"
+                    ItemType="WingTipToys.Category"
                     SelectMethod="GetCategories">
                         <ItemTemplate>
                             <b style="font-size: large; font-style: normal">
@@ -86,7 +86,6 @@
                             </b>
                         </ItemTemplate>
                     <ItemSeparatorTemplate>- </ItemSeparatorTemplate>
-
                 </asp:ListView>
             </section>
             <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />

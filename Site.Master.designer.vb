@@ -41,13 +41,13 @@ Partial Public Class SiteMaster
     Protected WithEvents Logo As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''categorylist control.
+    '''categoryList control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents categorylist As Global.System.Web.UI.WebControls.ListView
+    Protected WithEvents categoryList As Global.System.Web.UI.WebControls.ListView
 
     '''<summary>
     '''FeaturedContent control.

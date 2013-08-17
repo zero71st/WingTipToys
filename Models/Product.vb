@@ -18,6 +18,6 @@ Public Class Product
     Public Property CategoryID As Nullable(Of Integer)
 
     'Navigation
-    Overridable Property Product As Product
+    Overridable Property Category As Category
 
 End Class
