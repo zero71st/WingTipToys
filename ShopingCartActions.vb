@@ -40,6 +40,7 @@
         Return _db.ShoppingCartItems.Where(Function(s) s.CartID = shoppingCartId).ToList
     End Function
 
+    'TODO ทบทวบ GetTotal งง สุด ๆ
     Public Function GetTotal() As Decimal
         Dim shoppingCartID = GetCartID()
 
