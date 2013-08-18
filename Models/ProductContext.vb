@@ -9,5 +9,5 @@ Public Class ProductContext : Inherits DbContext
 
     Public Property Categories As DbSet(Of Category)
 
-    Public Property CartItem As DbSet(Of CartItem)
+    Public Property ShoppingCartItems As DbSet(Of CartItem)
 End Class
