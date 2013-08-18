@@ -10,7 +10,7 @@
             <section class="featured">
                 <ul>
 
-                    <asp:ListView ID="lvProductList" runat="server" DataKeyNames="ProductID" GroupItemCount="3" ItemType="WingTipToys.Product" SelectMethod="GetProducts">
+                    <asp:ListView ID="ProductLists" runat="server" DataKeyNames="ProductID" GroupItemCount="3" ItemType="WingTipToys.Product" SelectMethod="GetProducts">
                         <EmptyDataTemplate>
                             <table runat="server">
                                 <td>No data was returned.</td>
@@ -29,11 +29,12 @@
                             <Table>
                                 <tr>
                                     <td>
-                                        <a href="ProductDetail.aspx?productID=" <%#: Item.ProductID%>>
+                                        <%--ระวังเรื่องการทำส่ง Query string แบบนี้เนื่องจากใส่เครื่องหมายคำพูดผิดที่ประจำ ""--%>
+                                        <a href="/ProductDetail.aspx?productID=<%#:Item.ProductID%>">
                                             <img src="Images/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
-                                                width="100" height="75" border="1" />
+                                                width="100" height="75"   />
                                         </a>
-                                        <a href="ProductDetail.aspx?ProductID=" <%#: Item.ProductID%>>
+                                        <a href="/ProductDetail.aspx?productID=<%#: Item.ProductID%>">
                                             <span class="ProductName">
                                                 <%#:Item.ProductName%>
                                             </span>

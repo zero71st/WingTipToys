@@ -13,6 +13,7 @@ Public Class ProductList
 
         If categoryID.HasValue AndAlso categoryID > 0 Then
             query = query.Where(Function(p) p.CategoryID = categoryID)
+            '        query = query.Where(CType(Function(p) p.CategoryID = categoryID, Func(Of Product, Boolean)))
         End If
 
         Return query

@@ -268,6 +268,7 @@
     <Content Include="Images\Catalog\Images\Thumbs.db" />
     <Content Include="Images\Catalog\Images\Thumbs\Thumbs.db" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="ProductDetail.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -390,6 +391,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Models\ProductDatabaseInitializer.vb" />
+    <Compile Include="ProductDetail.aspx.designer.vb">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.vb">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ProductList.aspx.designer.vb">
       <DependentUpon>ProductList.aspx</DependentUpon>
     </Compile>

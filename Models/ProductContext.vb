@@ -5,6 +5,7 @@ Public Class ProductContext : Inherits DbContext
         MyBase.New("name=WingTipToys")
     End Sub
 
-    Public Property Products As IDbSet(Of Product)
-    Public Property Categories As IDbSet(Of Category)
+    Public Property Products As DbSet(Of Product)
+
+    Public Property Categories As DbSet(Of Category)
 End Class

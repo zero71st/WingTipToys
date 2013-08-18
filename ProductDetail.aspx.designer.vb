@@ -11,14 +11,14 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ProductList
+Partial Public Class ProductDetail
 
     '''<summary>
-    '''ProductLists control.
+    '''productDetail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ProductLists As Global.System.Web.UI.WebControls.ListView
+    Protected WithEvents productDetail As Global.System.Web.UI.WebControls.FormView
 End Class
