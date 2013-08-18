@@ -32,6 +32,16 @@
             <asp:Label CssClass="NormalBold" ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
         </strong>
     </div>
+        <table> 
+      <tr>
+        <td>
+          <asp:Button ID="UpdateBtn" runat="server" Text="Update" OnClick="UpdateBtn_Click" />
+        </td>
+        <td>
+          <!--Checkout Placeholder -->
+        </td>
+      </tr>
+    </table>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     

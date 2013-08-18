@@ -30,7 +30,7 @@
                                             .DateCreated = Date.Now}
             _db.ShoppingCartItems.Add(cartItem)
         Else
-            cartItem.Quantity = +1
+            cartItem.Quantity += 1
         End If
         _db.SaveChanges()
     End Sub
@@ -39,4 +39,16 @@
         Dim shoppingCartId = GetCartID()
         Return _db.ShoppingCartItems.Where(Function(s) s.CartID = shoppingCartId).ToList
     End Function
+
+    Public Function GetTotal() As Decimal
+        Dim shoppingCartID = GetCartID()
+
+        Dim total As Nullable(Of Decimal) = Decimal.Zero
+        total = CType((From cartItems In _db.ShoppingCartItems _
+                      Where cartItems.CartID = shoppingCartID _
+                      Select CType(cartItems.Quantity, Nullable(Of Integer)) * cartItems.Product.UnitPrice).Sum(), Nullable(Of Integer))
+
+        Return If(total, Decimal.Zero)
+    End Function
+
 End Class
