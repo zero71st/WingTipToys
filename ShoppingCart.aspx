@@ -10,7 +10,8 @@
             <asp:BoundField DataField="Product.UnitPrice" HeaderText="Price" />
             <asp:TemplateField HeaderText="Quantity">
                 <ItemTemplate>
-                    <asp:TextBox runat="server" Width="40%" Text="<%#:Item.Quantity%>"></asp:TextBox>
+                    <%--ลืมใส่ ID="PurchaseQuantity" ทำให้หา control ไม่เจอ--%>
+                    <asp:TextBox ID="PurchaseQuantity" runat="server" Width="40%" Text="<%#:Item.Quantity%>"></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Item Total">
@@ -35,7 +36,7 @@
         <table> 
       <tr>
         <td>
-          <asp:Button ID="UpdateBtn" runat="server" Text="Update" OnClick="UpdateBtn_Click" />
+          <asp:Button ID="UpdateBtn" runat="server" Text="Update" />
         </td>
         <td>
           <!--Checkout Placeholder -->

@@ -5,7 +5,7 @@
         Dim rawID As String = Request.QueryString("ProductID")
         Dim productID As Integer
         If Not String.IsNullOrEmpty(rawID) AndAlso Integer.TryParse(rawID, productID) Then
-            Dim userShoppingCart As ShopingCartActions = New ShopingCartActions()
+            Dim userShoppingCart As ShoppingCartActions = New ShoppingCartActions()
             userShoppingCart.AddToCart(Convert.ToInt16(rawID))
         Else
             ' TODO Do not forget implement
