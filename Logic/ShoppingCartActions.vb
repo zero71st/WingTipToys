@@ -120,5 +120,4 @@
                                              Select CType(s.Quantity, Nullable(Of Integer))).Sum()
         Return If(count, 0)
     End Function
-
 End Class

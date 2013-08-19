@@ -379,6 +379,8 @@
     </Compile>
     <Compile Include="Models\CartItem.vb" />
     <Compile Include="Models\Category.vb" />
+    <Compile Include="Models\Order.vb" />
+    <Compile Include="Models\OrderDetail.vb" />
     <Compile Include="Models\Product.vb" />
     <Compile Include="Models\ProductContext.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
