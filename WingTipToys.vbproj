@@ -157,6 +157,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Admin\AdminPage.aspx" />
     <Content Include="Checkout\CheckoutCancel.aspx" />
     <Content Include="Checkout\CheckoutComplete.aspx" />
     <Content Include="Checkout\CheckoutError.aspx" />
@@ -273,6 +274,7 @@
     <Content Include="Images\Catalog\Images\Thumbs.db" />
     <Content Include="Images\Catalog\Images\Thumbs\Thumbs.db" />
     <Content Include="Checkout\Web.config" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProductDetail.aspx" />
     <Content Include="ProductList.aspx" />
@@ -318,6 +320,13 @@
     </Compile>
     <Compile Include="AddToCart.aspx.vb">
       <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPage.aspx.designer.vb">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPage.aspx.vb">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />

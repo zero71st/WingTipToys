@@ -67,6 +67,11 @@
                     </section>
                     <nav>
                         <ul id="menu">
+                            <li>
+                                <span id="AdminLink" runat="server" visible="false">
+                                    <a href="Admin/AdminPage.aspx"> Admin</a>
+                                </span>
+                            </li>
                             <li><a runat="server" href="~/">Home</a></li>
                             <li><a runat="server" href="~/About">About</a></li>
                             <li><a runat="server" href="~/Contact">Contact</a></li>

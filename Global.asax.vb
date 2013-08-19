@@ -11,6 +11,14 @@ Public Class Global_asax
         RouteConfig.RegisterRoutes(RouteTable.Routes)
 
         Database.SetInitializer(New ProductDatabaseInitializer())
+
+        If Not (Roles.RoleExists("Administrator")) Then
+            Roles.CreateRole("Administrator")
+        End If
+        If Membership.GetUser("Admin") Is Nothing Then
+            Membership.CreateUser("Admin", "pa$$word", "Admin@gmail.com")
+            Roles.AddUserToRole("Admin", "Administrator")
+        End If
     End Sub
 
     Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)

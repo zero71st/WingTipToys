@@ -50,6 +50,15 @@ Partial Public Class SiteMaster
     Protected WithEvents cartCount As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''AdminLink control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AdminLink As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''categoryList control.
     '''</summary>
     '''<remarks>
