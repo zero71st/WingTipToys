@@ -41,6 +41,8 @@ Public Class ShoppingCart
         Next
 
         userShoppingCart.UpdateShoppingCartDatabase(cartId, cartUpdates)
+        CartList.DataBind()
+        lblTotal.Text = String.Format("{0:c}", userShoppingCart.GetTotal())
 
         Return userShoppingCart.GetCartItems()
     End Function
