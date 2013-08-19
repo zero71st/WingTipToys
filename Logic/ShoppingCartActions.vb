@@ -113,4 +113,12 @@
         End Using
     End Sub
 
+    Public Function GetCount() As Integer
+        Dim shoppingCartId = GetCartID()
+        Dim count As Nullable(Of Integer) = (From s In _db.ShoppingCartItems _
+                                             Where s.CartID = shoppingCartId _
+                                             Select CType(s.Quantity, Nullable(Of Integer))).Sum()
+        Return If(count, 0)
+    End Function
+
 End Class

@@ -46,6 +46,13 @@
 
     End Sub
 
+    Private Sub Page_PreRender(sender As Object, e As EventArgs) Handles Me.PreRender
+        'TODO: ตัวอย่างการใช้ PreRender ของ Page
+        Dim userShoppingCart As ShoppingCartActions = New ShoppingCartActions()
+        Dim countStr = String.Format("Cart: {0}", userShoppingCart.GetCount())
+        cartCount.InnerText = countStr
+    End Sub
+
     Public Function GetCategories() As IQueryable(Of Category)
         Dim db = New ProductContext()
         Dim query As IQueryable(Of Category) = db.Categories

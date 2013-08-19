@@ -45,6 +45,8 @@
                 </div>
                 <div class="float-right">
                     <section id="login">
+                        <a href="ShoppingCart.aspx"> <span id="cartCount" runat="server"></span></a>
+                        <span style="float:right">
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>
                                 <ul>
@@ -61,6 +63,7 @@
                                 </p>
                             </LoggedInTemplate>
                         </asp:LoginView>
+                       </span>
                     </section>
                     <nav>
                         <ul id="menu">

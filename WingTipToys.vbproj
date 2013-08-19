@@ -415,7 +415,7 @@
       <DependentUpon>ProductList.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="ShoppingCartActions.vb" />
+    <Compile Include="Logic\ShoppingCartActions.vb" />
     <Compile Include="ShoppingCart.aspx.designer.vb">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
