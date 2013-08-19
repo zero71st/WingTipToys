@@ -11,7 +11,7 @@
             <asp:TemplateField HeaderText="Quantity">
                 <ItemTemplate>
                     <%--ลืมใส่ ID="PurchaseQuantity" ทำให้หา control ไม่เจอ--%>
-                    <asp:TextBox ID="PurchaseQuantity" runat="server" Width="40%" Text="<%#:Item.Quantity%>"></asp:TextBox>
+                    <asp:TextBox ID="txtPurchaseQuantity" runat="server" Width="40%" Text="<%#:Item.Quantity%>"></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Item Total">
@@ -21,7 +21,7 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Remove Item">
                 <ItemTemplate>
-                    <asp:CheckBox ID="removeItem" runat="server" />
+                    <asp:CheckBox ID="chkRemove" runat="server" />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

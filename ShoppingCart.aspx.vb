@@ -11,7 +11,7 @@ Public Class ShoppingCart
         Else
             LabelTotalText.Text = ""
             lblTotal.Text = ""
-            'UpdateBtn.Visible = False
+            UpdateBtn.Visible = False
         End If
     End Sub
     Public Function GetShoppingCartItems() As List(Of CartItem)
@@ -32,8 +32,12 @@ Public Class ShoppingCart
             cartUpdates(i).ProductID = Convert.ToInt32(rowValues("ProductID"))
 
             Dim quantityTextBox As TextBox = New TextBox()
-            quantityTextBox = DirectCast(CartList.Rows(i).FindControl("PurchaseQuantity"), TextBox)
+            quantityTextBox = DirectCast(CartList.Rows(i).FindControl("txtPurchaseQuantity"), TextBox)
             cartUpdates(i).PurchaseQuantity = Convert.ToInt16(quantityTextBox.Text.ToString())
+
+            Dim removeCheckBox As CheckBox = New CheckBox()
+            removeCheckBox = DirectCast(CartList.Rows(i).FindControl("chkRemove"), CheckBox)
+            cartUpdates(i).RemoveItem = removeCheckBox.Checked
         Next
 
         userShoppingCart.UpdateShoppingCartDatabase(cartId, cartUpdates)

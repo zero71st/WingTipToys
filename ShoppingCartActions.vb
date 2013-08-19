@@ -67,7 +67,11 @@
                 For Each cartItem As CartItem In myCart
                     For i As Integer = 0 To cartItemCount - 1
                         If cartItem.Product.ProductID = cartUpdates(i).ProductID Then
-                            UpdateItem(cartId, cartItem.ProductID, cartUpdates(i).PurchaseQuantity)
+                            If cartUpdates(i).PurchaseQuantity < 1 OrElse cartUpdates(i).RemoveItem Then
+                                RemoveItem(cartId, cartItem.ProductID)
+                            Else
+                                UpdateItem(cartId, cartItem.ProductID, cartUpdates(i).PurchaseQuantity)
+                            End If
                         End If
                     Next
                 Next
@@ -92,4 +96,21 @@
             End Try
         End Using
     End Sub
+
+    Private Sub RemoveItem(removeCartId As String, removeProductId As Integer)
+        Using db As ProductContext = New ProductContext
+            Try
+                Dim myItem = (From c In db.ShoppingCartItems _
+                              Where c.CartID = removeCartId AndAlso c.ProductID = removeProductId _
+                              Select c).FirstOrDefault()
+                If Not (myItem Is Nothing) Then
+                    db.ShoppingCartItems.Remove(myItem)
+                    db.SaveChanges()
+                End If
+            Catch ex As Exception
+                Throw New Exception("ERROR: ไม่สามารถลบรายการในตระกร้าได้" & ex.Message.ToString, ex)
+            End Try
+        End Using
+    End Sub
+
 End Class
