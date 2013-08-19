@@ -157,6 +157,10 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Checkout\CheckoutCancel.aspx" />
+    <Content Include="Checkout\CheckoutComplete.aspx" />
+    <Content Include="Checkout\CheckoutError.aspx" />
+    <Content Include="Checkout\CheckoutReview.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -268,6 +272,7 @@
     <Content Include="packages.config" />
     <Content Include="Images\Catalog\Images\Thumbs.db" />
     <Content Include="Images\Catalog\Images\Thumbs\Thumbs.db" />
+    <Content Include="Checkout\Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProductDetail.aspx" />
     <Content Include="ProductList.aspx" />
@@ -359,6 +364,34 @@
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutCancel.aspx.designer.vb">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutCancel.aspx.vb">
+      <DependentUpon>CheckoutCancel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutComplete.aspx.designer.vb">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutComplete.aspx.vb">
+      <DependentUpon>CheckoutComplete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutError.aspx.designer.vb">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutError.aspx.vb">
+      <DependentUpon>CheckoutError.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CheckoutReview.aspx.designer.vb">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutReview.aspx.vb">
+      <DependentUpon>CheckoutReview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
