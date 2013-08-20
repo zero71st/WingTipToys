@@ -9,10 +9,9 @@
             </hgroup>
             <section class="featured">
                 <ul>
-
                     <asp:ListView ID="ProductLists" runat="server" DataKeyNames="ProductID" GroupItemCount="3" ItemType="WingTipToys.Product" SelectMethod="GetProducts">
                         <EmptyDataTemplate>
-                            <table runat="server">
+                            <table id="Table1" runat="server">
                                 <td>No data was returned.</td>
                             </table>
                         </EmptyDataTemplate>
@@ -30,14 +29,12 @@
                                 <tr>
                                     <td>
                                         <%--ระวังเรื่องการทำส่ง Query string แบบนี้เนื่องจากใส่เครื่องหมายคำพูดผิดที่ประจำ ""--%>
-                                        <a href="/ProductDetail.aspx?productID=<%#:Item.ProductID%>">
-                                            <img src="Images/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
+                                        <a href="<%#: GetRouteUrl("ProductByNameRoute", New With {.productName = Item.ProductName})%>">
+                                            <img src="/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
                                                 width="100" height="75"   />
                                         </a>
-                                        <a href="/ProductDetail.aspx?productID=<%#: Item.ProductID%>">
-                                            <span class="ProductName">
-                                                <%#:Item.ProductName%>
-                                            </span>
+                                        <a href="<%#: GetRouteUrl("ProductByNameRoute", New With {.productName = Item.ProductName})%>">
+                                            <%#:Item.ProductName%>
                                         </a>
                                         <br />
                                         <span class="ProductPrice">
