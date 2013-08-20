@@ -47,7 +47,7 @@ Public Class Global_asax
         routes.MapPageRoute("ContactRoute", "Contact", "~/Contact.aspx")
         routes.MapPageRoute("ProductListRoute", "ProductList", "~/ProductList.aspx")
         ' Dynamic Route
-        routes.MapPageRoute("ProductByCategoryRoute", "ProductList/{categoryName}", "~/ProductList.aspx")
+        routes.MapPageRoute("ProductsByCategoryRoute", "ProductList/{categoryName}", "~/ProductList.aspx")
         routes.MapPageRoute("ProductByNameRoute", "ProductList/{productName}", "~/ProductList.aspx")
     End Sub
 End Class

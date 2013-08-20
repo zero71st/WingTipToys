@@ -83,13 +83,14 @@
             </div>
         </header>
         <div id="body">
+            <%--ListView use for show Category--%>
             <section style="text-align: center; background-color: #fff">
                 <asp:ListView ID="categoryList" runat="server"
                     ItemType="WingTipToys.Category"
                     SelectMethod="GetCategories">
                         <ItemTemplate>
                             <b style="font-size: large; font-style: normal">
-                                <a href="/ProductList.aspx?id=<%#: Item.CategoryID %>">
+                                <a href="<%#: GetRouteUrl("ProductsByCategoryRoute",New With {.categoryName = Item.CategoryName}) %>">
                                     <%#: Item.CategoryName %>
                                 </a>
                             </b>
