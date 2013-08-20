@@ -10,6 +10,7 @@
 
     Public Function GetCategories() As IQueryable(Of Category)
         Dim db As New ProductContext()
+        ' ไม่ต้องใส่ IQueryable กี Run ได้
         Dim query = db.Categories
         Return query
     End Function
@@ -17,7 +18,6 @@
     Private Sub btnAddProduct_Click(sender As Object, e As EventArgs) Handles btnAddProduct.Click
         Dim fileOk As Boolean = False
         Dim path As String = Server.MapPath("~/Images/Catalog/Images/")
-
         'Verify file extention
         If txtProductImage.HasFile Then
             Dim fileExtension As String = System.IO.Path.GetExtension(txtProductImage.FileName).ToLower
@@ -47,12 +47,35 @@
                 Else
                     lblAddStatus.Text = "ไม่สามารถเพิ่มสินค้าในฐานข้อมูลได้"
                 End If
-
             Catch ex As Exception
                 lblAddStatus.Text = ex.Message.ToString
             End Try
         Else
             lblAddStatus.Text = "ประเภทของไฟล์ไม่ถูกต้อง"
+        End If
+    End Sub
+
+    Public Function GetProducts() As IQueryable(Of Product)
+        Dim db As New ProductContext
+        Dim query As IQueryable(Of Product) = db.Products
+        Return query
+    End Function
+
+    Protected Sub btnRemoveProduct_Click(sender As Object, e As EventArgs) Handles btnRemoveProduct.Click
+        Dim db As New ProductContext
+        Dim productId As Integer = Convert.ToInt32(ddlRemoveProduct.SelectedValue)
+
+        Dim product = (From p In db.Products Where p.ProductID = productId).FirstOrDefault
+
+        If Not (product Is Nothing) Then
+            db.Products.Remove(product)
+            db.SaveChanges()
+
+            'TODO: Redirect ไม่ได้ไม่รู้เป็นอะไร แต่ตัวอย่าง Redirect ได้
+            Dim pageUrl As String = Request.Url.AbsoluteUri.Substring(0, Request.Url.AbsoluteUri.Count() - Request.Url.Query.Count())
+            Response.Redirect(pageUrl & "?ProdutAction=remove")
+        Else
+            lblRemoveStatus.Text = "ไม่พบข้อมูลที่ต้องการลบ"
         End If
     End Sub
 End Class

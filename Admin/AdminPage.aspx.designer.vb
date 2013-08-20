@@ -120,4 +120,40 @@ Partial Public Class AdminPage
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblAddStatus As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''LabelRemoveProduct control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LabelRemoveProduct As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''ddlRemoveProduct control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlRemoveProduct As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''btnRemoveProduct control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnRemoveProduct As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblRemoveStatus control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblRemoveStatus As Global.System.Web.UI.WebControls.Label
 End Class
