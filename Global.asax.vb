@@ -19,6 +19,9 @@ Public Class Global_asax
             Membership.CreateUser("Admin", "pa$$word", "Admin@gmail.com")
             Roles.AddUserToRole("Admin", "Administrator")
         End If
+
+        'Add Routes
+        RegisterRoutes(RouteTable.Routes)
     End Sub
 
     Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)
@@ -35,5 +38,16 @@ Public Class Global_asax
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
         ' Fires when the application ends
+    End Sub
+
+    Private Sub RegisterRoutes(routes As RouteCollection)
+        ' Static Route
+        routes.MapPageRoute("HomeRoute", "Home", "~/Default.aspx")
+        routes.MapPageRoute("AboutRoute", "About", "~/About.aspx")
+        routes.MapPageRoute("ContactRoute", "Contact", "~/Contact.aspx")
+        routes.MapPageRoute("ProductListRoute", "ProductList", "~/ProductList.aspx")
+        ' Dynamic Route
+        routes.MapPageRoute("ProductByCategoryRoute", "ProductList/{categoryName}", "~/ProductList.aspx")
+        routes.MapPageRoute("ProductByNameRoute", "ProductList/{productName}", "~/ProductList.aspx")
     End Sub
 End Class

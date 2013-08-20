@@ -26,7 +26,7 @@
                     Text="* Product name required."
                     ControlToValidate="txtProductName"
                     SetFocusOnError="true"
-                    Display="Dynamic"></asp:RequiredFieldValidator>
+                    Display="Dynamic" EnableClientScript ="true"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
