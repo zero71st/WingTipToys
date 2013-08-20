@@ -72,10 +72,10 @@
                                     <a href="/Admin/AdminPage.aspx">Admin</a>
                                 </span>
                             </li>
-                            <li><a runat="server" href="<%#:GetRouteUrl("HomeRoute",Nothing) %>">Home</a></li>
-                            <li><a runat="server" href="<%#:GetRouteUrl("AboutRoute",Nothing) %>">About</a></li>
-                            <li><a runat="server" href="<%#:GetRouteUrl("ContactRoute",Nothing) %>">Contact</a></li>
-                            <li><a runat="server" href="<%#:GetRouteUrl("ProductListRoute",Nothing) %>">Products</a></li>
+                            <li><a href="<%#:GetRouteUrl("HomeRoute",Nothing) %>">Home</a></li>
+                            <li><a href="<%#:GetRouteUrl("AboutRoute",Nothing) %>">About</a></li>
+                            <li><a href="<%#:GetRouteUrl("ContactRoute",Nothing) %>">Contact</a></li>
+                            <li><a href="<%#:GetRouteUrl("ProductListRoute",Nothing) %>">Products</a></li>
                         </ul>
                     </nav>
                 </div>
