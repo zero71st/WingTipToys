@@ -43,7 +43,7 @@
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
-        If HttpContext.Current.User.IsInRole("Admin") Then
+        If HttpContext.Current.User.IsInRole("Administrator") Then
             AdminLink.Visible = True
         End If
     End Sub
