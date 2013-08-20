@@ -19,6 +19,7 @@ Public Class ProductDetail
         End If
         Return query
     End Function
+
     'Public Function GetProduct(<QueryString("productID")> productId As Nullable(Of Integer), <RouteData> productName As String) As Product
     '    'Dim db = New ProductContext()
     '    'Dim product As Product

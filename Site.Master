@@ -76,7 +76,6 @@
                             <li><a href="<%:GetRouteUrl("AboutRoute",Nothing) %>">About</a></li>
                             <li><a href="<%:GetRouteUrl("ContactRoute",Nothing) %>">Contact</a></li>
                             <li><a href="<%:GetRouteUrl("ProductListRoute",Nothing) %>">Products</a></li>
-                                                      
                         </ul>
                     </nav>
                 </div>
@@ -91,7 +90,7 @@
                     SelectMethod="GetCategories">
                         <ItemTemplate>
                             <b style="font-size: large; font-style: normal">
-                                <a href="<%#: GetRouteUrl("ProductsByCategoryRoute", New With {.categoryName = Item.CategoryName}) %>"><%#: Item.CategoryName %></a>
+                                <a href="<%#: GetRouteUrl("ProductsByCategoryRoute", New With {.catName = Item.CategoryName}) %>"><%#: Item.CategoryName %></a>
                             </b>
                         </ItemTemplate>
                     <ItemSeparatorTemplate>- </ItemSeparatorTemplate>

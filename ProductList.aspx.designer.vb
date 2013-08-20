@@ -14,11 +14,11 @@ Option Explicit On
 Partial Public Class ProductList
 
     '''<summary>
-    '''ProductLists control.
+    '''productList control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ProductLists As Global.System.Web.UI.WebControls.ListView
+    Protected WithEvents productList As Global.System.Web.UI.WebControls.ListView
 End Class

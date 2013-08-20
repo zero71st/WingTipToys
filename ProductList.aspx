@@ -9,7 +9,7 @@
             </hgroup>
             <section class="featured">
                 <ul>
-                    <asp:ListView ID="ProductLists" runat="server" DataKeyNames="ProductID" GroupItemCount="3" ItemType="WingTipToys.Product" SelectMethod="GetProducts">
+                    <asp:ListView ID="productList" runat="server" DataKeyNames="ProductID" GroupItemCount="3" ItemType="WingTipToys.Product" SelectMethod="GetProduct">
                         <EmptyDataTemplate>
                             <table id="Table1" runat="server">
                                 <td>No data was returned.</td>
@@ -30,7 +30,7 @@
                                     <td>
                                         <%--ระวังเรื่องการทำส่ง Query string แบบนี้เนื่องจากใส่เครื่องหมายคำพูดผิดที่ประจำ ""--%>
                                         <a href="<%#: GetRouteUrl("ProductByNameRoute", New With {.productName = Item.ProductName})%>">
-                                            <img src="/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
+                                            <img src="/Images/Catalog/Images/Thumbs/<%#:Item.ImagePath%>"
                                                 width="100" height="75"   />
                                         </a>
                                         <a href="<%#: GetRouteUrl("ProductByNameRoute", New With {.productName = Item.ProductName})%>">

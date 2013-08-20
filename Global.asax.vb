@@ -47,14 +47,14 @@ Public Class Global_asax
         ' Fires when the application ends
     End Sub
 
-    Private Sub RegisterRoutes(routes As RouteCollection)
-        ' Static Route
+    Private Shared Sub RegisterRoutes(routes As RouteCollection)
+        'Static Route
         routes.MapPageRoute("HomeRoute", "Home", "~/Default.aspx")
         routes.MapPageRoute("AboutRoute", "About", "~/About.aspx")
         routes.MapPageRoute("ContactRoute", "Contact", "~/Contact.aspx")
         routes.MapPageRoute("ProductListRoute", "ProductList", "~/ProductList.aspx")
-        ' Dynamic Route
-        routes.MapPageRoute("ProductsByCategoryRoute", "ProductList/{categoryName}", "~/ProductList.aspx")
-        routes.MapPageRoute("ProductByNameRoute", "Product/{productName}", "~/ProductDetail.aspx")
+        'Dynamic Route
+        routes.MapPageRoute("ProductsByCategoryRoute", "ProductList/{catName}", "~/ProductList.aspx")
+        routes.MapPageRoute("ProductByNameRoute", "Product/{productName}", "~/ProductDetails.aspx")
     End Sub
 End Class
