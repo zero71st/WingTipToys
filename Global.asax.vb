@@ -36,10 +36,13 @@ Public Class Global_asax
         ' Fires when an error occurs
 
         ' Trap error that occure anywhere in application.
-        Dim ex As Exception = Server.GetLastError()
-        If TypeOf ex Is HttpUnhandledException Then
-            ex = New Exception(ex.InnerException.Message)
-            Server.Transfer("ErrorPage.aspx?handler=Application_Error%20-%20Global.asax", True)
+        ' Get last error from the server
+        Dim exc As Exception = Server.GetLastError()
+        If TypeOf exc Is HttpUnhandledException Then
+            If exc.InnerException IsNot Nothing Then
+                exc = New Exception(exc.InnerException.Message)
+                Server.Transfer("ErrorPage.aspx?handler=Application_Error%20-%20Global.asax", True)
+            End If
         End If
     End Sub
 
