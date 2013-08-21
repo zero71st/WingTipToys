@@ -19,7 +19,6 @@ Public Class Global_asax
             Membership.CreateUser("Admin", "pa$$word", "Admin@gmail.com")
             Roles.AddUserToRole("Admin", "Administrator")
         End If
-
         'Add Routes
         RegisterRoutes(RouteTable.Routes)
     End Sub
@@ -58,6 +57,6 @@ Public Class Global_asax
         routes.MapPageRoute("ProductListRoute", "ProductList", "~/ProductList.aspx")
         'Dynamic Route
         routes.MapPageRoute("ProductsByCategoryRoute", "ProductList/{catName}", "~/ProductList.aspx")
-        routes.MapPageRoute("ProductByNameRoute", "Product/{productName}", "~/ProductDetails.aspx")
+        routes.MapPageRoute("ProductByNameRoute", "Product/{productName}", "~/ProductDetail.aspx")
     End Sub
 End Class

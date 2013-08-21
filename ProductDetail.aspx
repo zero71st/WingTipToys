@@ -20,8 +20,7 @@
                         <br />
                         <b>Product Number:</b><%#:Item.ProductID%>
                         <br />
-                        <%--<a href="AddToCart.aspx?productID=<%#Item.ProductID%>">--%>
-                        <a href="<%#:GetRouteUrl("ProductByNameRoute", New With {.productName = Item.ProductName})%>"
+                        <a href="/AddToCart.aspx?productID=<%#Item.ProductID%>">
                             <b>Add To Cart</b>
                         </a>
                     </td>

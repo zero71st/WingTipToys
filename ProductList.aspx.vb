@@ -24,13 +24,4 @@ Public Class ProductList
 
         Return query
     End Function
-
-    Public Function GetProduct(<RouteData> categoryName As String) As IQueryable(Of Product)
-        Dim db = New ProductContext()
-        Dim query As IQueryable(Of Product) = db.Products
-        If Not (String.IsNullOrEmpty(categoryName)) Then
-            query = query.Where(Function(p) String.Compare(p.Category.CategoryName, categoryName) = 0)
-        End If
-        Return query
-    End Function
 End Class

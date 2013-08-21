@@ -90,7 +90,12 @@
                     SelectMethod="GetCategories">
                         <ItemTemplate>
                             <b style="font-size: large; font-style: normal">
-                                <a href="<%#: GetRouteUrl("ProductsByCategoryRoute", New With {.catName = Item.CategoryName}) %>"><%#: Item.CategoryName %></a>
+                                <%--ไม่สามารถใช้ URL Routing กับ Link นี้ได้ ไม่รู้เกิดจากอะไร
+                                ลอกตัวอย่างมาก็ไม่ได้--%>
+                              <%--  <a href="<%#: GetRouteUrl("ProductsByCategoryRoute", New With {.catName = Item.CategoryName}) %>"><%#: Item.CategoryName %></a>--%>
+                                <a href="ProductList.aspx?id=<%#: Item.CategoryID %>">
+                                    <%#Item.CategoryName %>
+                                </a>
                             </b>
                         </ItemTemplate>
                     <ItemSeparatorTemplate>- </ItemSeparatorTemplate>

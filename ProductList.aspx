@@ -9,7 +9,12 @@
             </hgroup>
             <section class="featured">
                 <ul>
-                    <asp:ListView ID="productList" runat="server" DataKeyNames="ProductID" GroupItemCount="3" ItemType="WingTipToys.Product" SelectMethod="GetProduct">
+                    <asp:ListView ID="productList" runat="server"
+                        DataKeyNames="ProductID"
+                        GroupItemCount="3"
+                        ItemType="WingTipToys.Product" 
+                        SelectMethod="GetProducts">
+                        
                         <EmptyDataTemplate>
                             <table id="Table1" runat="server">
                                 <td>No data was returned.</td>
@@ -41,7 +46,7 @@
                                             <b> Price: <%#:String.Format("{0:c}", Item.UnitPrice)%></b>
                                         </span>
                                         <br />
-                                        <a href="AddToCart.aspx?productID=<%#:Item.ProductID%>">
+                                        <a href="/AddToCart.aspx?productID=<%#:Item.ProductID%>">
                                             <b>Add To Cart</b>
                                         </a>
                                     </td>
